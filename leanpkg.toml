@@ -1,0 +1,8 @@
+[package]
+name = "herstein"
+version = "0.1"
+lean_version = "master"
+path = "src"
+
+[dependencies]
+mathlib = {git = "https://github.com/leanprover/mathlib", rev = "c7c0d2a1bb2f0ba353bbcb0510352a25c80fc186"}
