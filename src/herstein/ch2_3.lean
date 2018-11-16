@@ -48,3 +48,25 @@ eq.symm $ calc a
 ... = (a⁻¹)⁻¹ * (a⁻¹ * a) : by rw mul_assoc
 ... = (a⁻¹)⁻¹ * 1         : by rw inv_mul_self
 ... = (a⁻¹)⁻¹             : mul_one _
+
+-- left cancellation
+lemma L2_3_2₁ (a u w: G) [group G]:
+  a * u = a * w → u = w :=
+λ h, by calc u
+    = 1 * u         : (one_mul _).symm
+... = a⁻¹ * a * u   : by rw ←inv_mul_self
+... = a⁻¹ * (a * u) : mul_assoc _ _ _
+... = a⁻¹ * (a * w) : by rw h
+... = a⁻¹ * a * w   : (mul_assoc _ _ _).symm
+... = 1 * w         : by rw inv_mul_self
+... = w             : by rw one_mul
+
+
+
+-- right cancellation: similarly
+lemma L2_3_2₂ (a u w: G) [group G]:
+  u * a = w * a → u = w :=
+λ h, by calc u
+    = u * (a * a⁻¹) : (mul_right_inv a).symm ▸ (mul_one u).symm
+... = w * (a * a⁻¹) : by rw [ ←mul_assoc, h, mul_assoc ]
+... = w             : by rw [ mul_right_inv, mul_one ]
