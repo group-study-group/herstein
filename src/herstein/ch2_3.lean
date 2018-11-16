@@ -49,6 +49,8 @@ eq.symm $ calc a
 ... = (a⁻¹)⁻¹ * 1         : by rw inv_mul_self
 ... = (a⁻¹)⁻¹             : mul_one _
 
+-- now justified: use of group.mul_inv_rev
+
 lemma L2_3_1d (a b : G) [group G] : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 inv_eq_of_mul_eq_one $ calc a * b * (b⁻¹ * a⁻¹)
     = a * (b * (b⁻¹ * a⁻¹))   : mul_assoc _ _ _
