@@ -52,7 +52,7 @@ eq.symm $ calc a
 -- left cancellation
 lemma L2_3_2₁ (a u w: G) [group G]:
   a * u = a * w → u = w :=
-λ h, by calc u
+λ h, calc u
     = 1 * u         : (one_mul _).symm
 ... = a⁻¹ * a * u   : by rw ←inv_mul_self
 ... = a⁻¹ * (a * u) : mul_assoc _ _ _
@@ -66,7 +66,7 @@ lemma L2_3_2₁ (a u w: G) [group G]:
 -- right cancellation: similarly
 lemma L2_3_2₂ (a u w: G) [group G]:
   u * a = w * a → u = w :=
-λ h, by calc u
+λ h, calc u
     = u * (a * a⁻¹) : (mul_right_inv a).symm ▸ (mul_one u).symm
 ... = w * (a * a⁻¹) : by rw [ ←mul_assoc, h, mul_assoc ]
 ... = w             : by rw [ mul_right_inv, mul_one ]
