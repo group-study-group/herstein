@@ -1,6 +1,6 @@
 import algebra.group algebra.group_power
 
-variables A: Type*
+variable A: Type*
 
 theorem Q_02 (a b: A) [comm_group A]:
   ∀ n: ℕ, (a * b) ^ n = a ^ n * b ^ n
