@@ -58,7 +58,7 @@ H30.symm )
 
 
 
-/--/
+/- 
 theorem Q04AltAlt [group G] : 
 (∀ a b : G, 
 (∃ i : ℤ, (Q04H a b i) ∧ (Q04H a b (i + 1)) ∧ (Q04H a b (i + 2)))) 
@@ -105,4 +105,4 @@ begin
     rw mul_right_inj at H3, 
     rw mul_right_inj at H3,
     rw H3, 
-end
+end -/
