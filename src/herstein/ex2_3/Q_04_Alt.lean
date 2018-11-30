@@ -51,6 +51,13 @@ H30.symm )
 
 
 
+
+
+
+
+
+
+
 /--/
 theorem Q04AltAlt [group G] : 
 (∀ a b : G, 
@@ -99,5 +106,3 @@ begin
     rw mul_right_inj at H3,
     rw H3, 
 end
-
--- check out rw_assoc
