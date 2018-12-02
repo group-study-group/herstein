@@ -3,7 +3,7 @@ import group_theory.subgroup
 
 variables {G: Type*} {H: set G} {a: G}
 
-theorem Q_04 [hG: group G] [hH: is_subgroup H]:
+theorem Q_04a [hG: group G] [hH: is_subgroup H]:
   is_subgroup ((λ h, a * h * a⁻¹) '' H) := {
 
   inv_mem := λ g ⟨h, ⟨hH, ha⟩⟩, begin
